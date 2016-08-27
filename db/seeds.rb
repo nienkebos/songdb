@@ -1,13 +1,27 @@
+Song.delete_all
+Artist.delete_all
+
 
 artist1 = Artist.create(name: "Leonard Cohen" )
 artist2 = Artist.create(name: "Moby" )
 artist3 = Artist.create(name: "The Doors" )
 artist4 = Artist.create(name: "Michael Jackson" )
 
-Song.create({title: "Famous blue raincoat", artist: artist1 })
-Song.create({title: "Why does my heart feel so bad?", artist: artist2 })
-Song.create({title: "Light my fire", artist: artist3 })
-Song.create({title: "Thriller", artist: artist4 })
+Song.create([
+  { title: "Famous blue raincoat", artist: artist1 },
+  { title: "Suzanne", artist: artist1 },
+  { title: "The future", artist: artist1 },
+  { title: "Show me the place", artist: artist1 },
+  { title: "Why does my heart feel so bad?", artist: artist2 },
+  { title: "The sky is broken", artist: artist2 },
+  { title: "7", artist: artist2 },
+  { title: "Light my fire", artist: artist3 },
+  { title: "Moonlight drive", artist: artist3 },
+  { title: "You're lost little girl", artist: artist3 },
+  { title: "Thriller", artist: artist4 },
+  { title: "Black or white", artist: artist4 },
+  { title: "Billy Jean", artist: artist4 }
+])
 
 
 
