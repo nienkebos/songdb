@@ -1,7 +1,13 @@
 <h1>Artists</h1>
 
-<ul>
-<% @artists.each do |artist|%>
-  <li><%= link_to artist.name, artist %></li>
-<% end %>
-</ul
+<table>
+  <tr>
+    <th><%= sortable "name" %></th>
+    <th><%= sortable "created_at", "New" %></th>
+  </tr>
+  <% @artists.each do |artist|%>
+    <tr>
+      <td><%= link_to artist.name, artist %></td>
+    </tr>
+  <% end %>
+</table>
