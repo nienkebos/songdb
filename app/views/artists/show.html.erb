@@ -1,12 +1,19 @@
 <h1><%= @artist.name %></h1>
 
+
+
 <p>Songs:</p>
 
 <ol>
   <% @artist.songs.each do |song| %>
-    <li><%= song.title %></li>
+    <li>
+      <%= song.title %>
+      <button id="song-<%= song.id %>">Delete song</button>
+    </li>
   <% end %>
 </ol>
+
+<button>Add song</button>
 
 
 <%= link_to "Back", root_path %>
