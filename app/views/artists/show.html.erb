@@ -6,9 +6,9 @@
 
 <ol>
   <% @artist.songs.each do |song| %>
-    <li>
+    <li id="song-<%= song.id %>">
       <%= song.title %>
-      <button id="song-<%= song.id %>">Delete song</button>
+      <button id="<%= song.id %>" class="delete-song">Delete song</button>
     </li>
   <% end %>
 </ol>
