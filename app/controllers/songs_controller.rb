@@ -10,8 +10,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @artist = Artist.find(params[:artist_id])
-    render json: params
+
     # @song = Song.new(song_params)
     #   if @song.save
     #     format.html { redirect_to @artist, notice: 'Song was successfully created.' }
